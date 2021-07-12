@@ -2,4 +2,4 @@ OS: linux
 distros: ubuntu:latest
 services: docker
 script: 
-  - make 
+  - make
