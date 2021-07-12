@@ -5,5 +5,5 @@ all: build
 
 build:
 	docker login --username=ajv21 -p=Jun21@2021
-    docker buildx build --platform linux/arm64 -t ajv21/sample:latest .
+    docker buildx build --platform linux/arm64,linux/amd64 -t ajv21/multi-arch-test:latest .
 
