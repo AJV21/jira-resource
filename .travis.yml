@@ -1,5 +1,5 @@
 os: linux
-distros: ubuntu:latest
+dist: ubuntu:latest
 services: docker
 script: 
   - make
