@@ -3,5 +3,6 @@ dist: ubuntu:latest
 services: docker
 script: 
   - docker login --username=ajv21 -p=Jun21@2021
+  - git clone git://github.com/docker/buildx && cd buildx && make install && cd ..
   - export DOCKER_CLI_EXPERIMENTAL=enabled
-  - docker buildx build -t ajv21/sample/:buildx_test --platform linux/amd64,linux/arm64 --push .
+  - ~/.docker/cli-plugins/docker-buildx build -t ajv21/sample/:buildx_test --platform linux/amd64,linux/arm64 --push .
