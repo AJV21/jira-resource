@@ -1,11 +1,10 @@
 .PHONY: all build push
 
 all: build
-	make push
+	make push 
 	@echo "=== DONE ==="
 
 build:
-	docker build --no-cache -t vergissberlin/jira-resource .
+	docker login --username=ajv21 -p=Jun21@2021
+    docker buildx build --platform linux/arm64 -t ajv21/sample:buildx_test64 .
 
-push:
-	docker push vergissberlin/jira-resource
