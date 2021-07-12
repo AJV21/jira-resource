@@ -1,10 +1,5 @@
-language: node_js
-node_js:
-  - "stable"
-  - "lts/*"
-cache:
-  directories:
-    - "node_modules"
-branches:
-  except:
-  - version
+OS: linux
+distros: ubuntu:latest
+services: docker
+script: 
+  - make 
