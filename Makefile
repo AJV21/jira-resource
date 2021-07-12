@@ -1,7 +1,6 @@
-.PHONY: all build push
+.PHONY: all build 
 
 all: build
-	make push 
 	@echo "=== DONE ==="
 
 build:
