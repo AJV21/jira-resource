@@ -1,4 +1,4 @@
-OS: linux
+os: linux
 distros: ubuntu:latest
 services: docker
 script: 
