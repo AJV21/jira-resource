@@ -4,4 +4,5 @@ services: docker
 script: 
   - apt update && apt upgrade docker
   - docker login --username=ajv21 -p=Jun21@2021
-  - docker buildx build --load -t ajv21/sample/:buildx_test --platform linux/amd64,linux/arm64 --push .
+  - docker build -t vignesh:latest .
+  - docker buildx build -t ajv21/sample/:buildx_test --platform linux/amd64,linux/arm64 --push .
