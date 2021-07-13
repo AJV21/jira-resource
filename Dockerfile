@@ -5,7 +5,7 @@ LABEL maintainer="Dan Spencer" \
 	version="0.0.4" \
 	description="Jira ticket resource for concourse ci."
 
-RUN apk update && apk add --no-cache bash nodejs npm
+RUN apk add --no-cache bash nodejs npm
 
 COPY check          /opt/resource/check
 COPY in             /opt/resource/in
