@@ -8,8 +8,6 @@ cache:
 branches:
   except:
   - version
-arch:
-  - arm64
 os: linux
 before_install:
   - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
