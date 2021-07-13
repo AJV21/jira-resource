@@ -9,6 +9,5 @@ cache:
 branches:
   except:
   - version
-  
 script:
   - make
