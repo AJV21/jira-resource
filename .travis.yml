@@ -8,4 +8,7 @@ before_install:
 script:
   - docker --version 
   - docker login --username=ajv21 -p=Jun21@2021
+  - docker buildx create --name ajbuild
+  - docker buildx use ajbuild
   - docker buildx build -t ajv21/sample:latest --platform linux/amd64,linux/arm64 --push .
+  - docker buildx rm ajbuild
