@@ -11,3 +11,4 @@ branches:
   - version
 script:
   - make
+  
