@@ -1,5 +1,5 @@
 os: linux
-dist: bionic
+dist: bioni
 language: node_js
 node_js:
   - "stable"
@@ -23,5 +23,6 @@ script:
   - docker buildx use vigbuild
   - docker buildx inspect --bootstrap
   - free -m
-  - docker buildx build -t ajv21/sample:latest --platform linux/amd64 --push .
+  - docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+  - docker buildx build -t ajv21/sample:latest --platform linux/arm64 --push .
   - docker buildx rm vigbuild 
