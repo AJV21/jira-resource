@@ -1,9 +1,11 @@
-.PHONY: all build 
+.PHONY: all build push
 
 all: build
+	make push
 	@echo "=== DONE ==="
 
 build:
-    docker --version
-	
+	docker build --no-cache -t vergissberlin/jira-resource .
 
+push:
+	docker push vergissberlin/jira-resource
