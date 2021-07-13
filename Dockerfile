@@ -5,7 +5,6 @@ LABEL maintainer="Dan Spencer" \
 	version="0.0.4" \
 	description="Jira ticket resource for concourse ci."
 
-
 COPY check          /opt/resource/check
 COPY in             /opt/resource/in
 COPY out            /opt/resource/out
