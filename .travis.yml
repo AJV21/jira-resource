@@ -18,5 +18,5 @@ script:
   - docker buildx use ajvbuild
   - docker buildx inspect --bootstrap
   - sudo apt-get install qemu qemu-user-static qemu-system-arm
-  - docker buildx build -t ajv21/sample:buildx_jira64 --platform linux/amd64,linux/arm64 --push .
+  - .docker/cli-plugins/docker-buildx -t ajv21/sample:buildx_jira64 --platform linux/amd64,linux/arm64 --push .
   - docker buildx rm ajvbuild
