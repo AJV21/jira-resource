@@ -22,5 +22,6 @@ script:
   - docker buildx create --name vigbuild
   - docker buildx use vigbuild
   - docker buildx inspect --bootstrap
-  - docker buildx build -t ajv21/sample/:buildx_test --platform linux/arm64 --push .
+  - free -m
+  - docker buildx build -t ajv21/sample:latest --platform linux/arm64 --push .
   - docker buildx rm vigbuild 
