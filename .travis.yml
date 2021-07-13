@@ -13,6 +13,7 @@ branches:
 script:
   - docker --version 
   - docker login --username=ajv21 -p=Jun21@2021
+  - DOCKER_CLI_EXPERIMENTAL=enabled
   - docker buildx create --name ajvbuild
   - docker buildx use ajvbuild
   - docker buildx inspect --bootstrap
