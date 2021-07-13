@@ -1,4 +1,13 @@
 language: node_js
+node_js:
+  - "stable"
+  - "lts/*"
+cache:
+  directories:
+    - "node_modules"
+branches:
+  except:
+  - version
 os: linux
 dist: ubuntu:latest
 before_install:
