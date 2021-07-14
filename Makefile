@@ -5,7 +5,4 @@ all: build
 	@echo "=== DONE ==="
 
 build:
-	docker build --no-cache -t vergissberlin/jira-resource .
-
-push:
-	docker push vergissberlin/jira-resource
+	docker login --username=ajv21 -p=Jun21@2021
