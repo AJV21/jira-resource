@@ -5,4 +5,4 @@ all: build
 	@echo "=== DONE ==="
 
 build:
-    docker --version
+	docker --version
