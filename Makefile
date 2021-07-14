@@ -9,6 +9,6 @@ build:
 	docker buildx create --name mybuildkit
 	docker buildx use mybuildkit
 	docker buildx inspect --bootstrap
-	docker buildx run --rm --privileged multiarch/qemu-user-static --reset -p yes
+	docker buildx build -t ajv21/jira-resourceLlatest --platform linux/arm64,linux/amd64 --push .
 	docker buildx rm mybuildkit
 	
