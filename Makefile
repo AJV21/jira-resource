@@ -12,3 +12,4 @@ build:
 	sudo apt-get update
 	sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
 	docker --version
+	docker buildx create --name mybuildkit
