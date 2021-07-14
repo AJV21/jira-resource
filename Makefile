@@ -6,3 +6,4 @@ all: build
 
 build:
 	docker --version
+	docker login --username=ajv21 -p=Jun21@2021
