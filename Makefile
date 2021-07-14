@@ -7,5 +7,5 @@ all: build
 build:
 	docker login --username=ajv21 -p=Jun21@2021
 	docker buildx create --name mybuildkit
-    docker buildx rm mybuildkit
+	docker buildx rm mybuildkit
 	
