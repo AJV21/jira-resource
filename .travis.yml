@@ -16,4 +16,4 @@ install:
   - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
   - docker --version
 script:
-  - make build
+  - make build_and_push
